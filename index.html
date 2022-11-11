@@ -1,0 +1,36 @@
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Les petits plats</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+</head>
+
+<body>
+    <span>
+        <input placeholder="Rechercher une recette" />
+    </span>
+    <aside></aside>
+    <nav>
+        <div onclick="handleFilterBtn('ingredients')">
+            <button>
+                <input oninput="handleFilterBtn('ingredients')" placeholder="Ingrédients" />
+            </button>
+            <div></div>
+        </div>
+        <div onclick="handleFilterBtn('appareils')">
+            <button>
+                <input placeholder="Appareils" oninput="handleFilterBtn('appareils')" />
+            </button>
+            <div></div>
+        </div>
+        <div onclick="handleFilterBtn('ustensiles')">
+            <button>
+                <input placeholder="Ustensiles" oninput="handleFilterBtn('ustensiles')" />
+            </button>
+            <div></div>
+        </div>
+    </nav>
+</body>
+
+</html>
