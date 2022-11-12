@@ -1,0 +1,93 @@
+body {
+  margin: 50px 100px;
+  font-family: "Lato", sans-serif;
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 1280px;
+}
+
+.title-logo {
+  display: flex;
+  margin: auto;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+.fa.fa-search {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  bottom: 50%;
+  margin-top: auto;
+  margin-bottom: auto;
+  color: black;
+  font-size: 32px;
+  width: 32px;
+  height: 32px;
+}
+
+.search-bar-container {
+  display: block;
+  position: relative;
+}
+
+#search-recipe {
+  width: 100%;
+  height: 70px;
+  background-color: #e7e7e7;
+  border: none;
+  border-radius: 5px;
+  padding-left: 25px;
+  padding-right: 70px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 1.125rem;
+}
+
+nav {
+  margin: 20px 0;
+  display: flex;
+  gap: 20px;
+}
+
+.filter-btn {
+  padding: 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 170px;
+  height: 69px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter-btn input {
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  font-weight: bold;
+  overflow: hidden;
+  cursor: pointer;
+  width: 100%;
+}
+
+.filter-btn input::placeholder {
+  color: #fff;
+}
+
+#ingredients-btn {
+  background-color: blue;
+}
+
+#appareils-btn {
+  background-color: green;
+}
+
+#ustensiles-btn {
+  background-color: red;
+}

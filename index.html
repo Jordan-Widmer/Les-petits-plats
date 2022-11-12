@@ -3,34 +3,46 @@
 <head>
     <meta charset="utf-8" />
     <title>Les petits plats</title>
+    <meta name="description" content="">
     <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-    <span>
-        <input placeholder="Rechercher une recette" />
+    <img src="./assets/logo.png" alt="Les petits Plats Homepage" class="title-logo" />
+    <span class="search-bar-container">
+        <input id="search-recipe" placeholder="Rechercher un ingrédient, appareil, ustensiles ou une recette" />
+        <i class="fa fa-search"></i>
     </span>
     <aside></aside>
     <nav>
         <div onclick="handleFilterBtn('ingredients')">
-            <button>
+            <button id="ingredients-btn" class="filter-btn">
                 <input oninput="handleFilterBtn('ingredients')" placeholder="Ingrédients" />
+                <i class="fa fa-chevron-down"></i>
             </button>
             <div></div>
         </div>
         <div onclick="handleFilterBtn('appareils')">
-            <button>
+            <button id="appareils-btn">
                 <input placeholder="Appareils" oninput="handleFilterBtn('appareils')" />
+                <i class="fa fa-chevron-down"></i>
             </button>
             <div></div>
         </div>
         <div onclick="handleFilterBtn('ustensiles')">
-            <button>
+            <button id="ustensiles-btn">
                 <input placeholder="Ustensiles" oninput="handleFilterBtn('ustensiles')" />
+                <i class="fa fa-chevron-down"></i>
             </button>
             <div></div>
         </div>
     </nav>
 </body>
+
+<script src="./js/"></script>
 
 </html>
