@@ -1,0 +1,22 @@
+{
+  "name": "lespetitsplats-main",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Korootak/Les-petits-plats.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Korootak/Les-petits-plats/issues"
+  },
+  "homepage": "https://github.com/Korootak/Les-petits-plats#readme",
+  "devDependencies": {
+    "eslint": "^8.27.0"
+  }
+}
