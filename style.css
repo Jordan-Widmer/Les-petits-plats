@@ -23,6 +23,7 @@ body {
   margin-bottom: auto;
   color: black;
   font-size: 32px;
+  cursor: pointer;
   width: 32px;
   height: 32px;
 }
@@ -30,6 +31,7 @@ body {
 .search-bar-container {
   display: block;
   position: relative;
+  margin-bottom: 32px;
 }
 
 #search-recipe {
@@ -44,7 +46,6 @@ body {
   white-space: nowrap;
   text-overflow: ellipsis;
   font-size: 1.125rem;
-  margin-bottom: 16px;
 }
 
 nav {
