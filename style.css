@@ -6,8 +6,9 @@ body {
   max-width: 1280px;
 }
 
-.title-logo {
+.logo-title {
   display: flex;
+  width: 330px;
   margin: auto;
   padding-top: 40px;
   padding-bottom: 20px;
@@ -34,7 +35,7 @@ body {
 #search-recipe {
   width: 100%;
   height: 70px;
-  background-color: #E7E7E7;
+  background-color: #e7e7e7;
   border: none;
   border-radius: 5px;
   padding-left: 25px;
@@ -43,15 +44,16 @@ body {
   white-space: nowrap;
   text-overflow: ellipsis;
   font-size: 1.125rem;
+  margin-bottom: 16px;
 }
 
 nav {
-  margin: 20px 0;
+  margin: 20px 0px 25px;
   display: flex;
   gap: 20px;
 }
 
-.filter-btn {
+.btn-filter {
   padding: 20px;
   border: none;
   border-radius: 6px;
@@ -64,7 +66,7 @@ nav {
   align-items: center;
 }
 
-.filter-btn input {
+.btn-filter input {
   color: #fff;
   background-color: transparent;
   border: none;
@@ -76,22 +78,91 @@ nav {
   width: 100%;
 }
 
-.filter-btn input::placeholder {
+.btn-filter input::placeholder {
   color: #fff;
 }
 
 .fa-chevron-down {
- color: #fff;
+  color: #fff;
 }
 
 #ingredients-btn {
-  background-color: #3382F7;
+  background-color: #3382f7;
 }
 
 #appareils-btn {
-  background-color: #68D9A4;
+  background-color: #68d9a4;
 }
 
 #ustensiles-btn {
-  background-color: #ED6454;
+  background-color: #ed6454;
+}
+
+.recipe-map {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 calc(25% - 10px);
+  border-radius: 7px;
+  margin: 0;
+  overflow: hidden;
+  width: 393px;
+  height: 380px;
+}
+
+.recipe-map-picture {
+  background-color: #C7BEBE;
+  flex: 1 0 50%;
+}
+
+.recipe-map-details {
+  padding: 0px 20px;
+  justify-content: space-between;
+  background-color: #E7E7E7;
+  flex: 1 0 50%;
+}
+
+.recipe-map-title {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  gap: 20px;
+}
+
+.recipe-map-name {
+  font-weight: lighter;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.recipe-map-title h2 {
+  font-weight: 400;
+  font-size: 1.125rem;
+}
+
+.recipe-process {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.recipe-ingredients {
+  display: block;
+  max-width: 50%;
+  flex-shrink: 0;
+  font-size: .75rem;
+  font-weight: bold;
+  font-family: "Roboto";
+}
+
+.recipe-description {
+  overflow: hidden;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 12px;
+  max-height: 72px;
+  font-family: "Roboto";
 }

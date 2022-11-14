@@ -19,24 +19,34 @@ export function generateRecipeMap(recipe) {
   recipeDescription.textContent = recipe.description;
 
   recipeMap.appendChild(recipeMapImage);
-  recipeCard.appendChild(recipeMapDetails);
+  recipeMap.appendChild(recipeMapDetails);
   recipeTitle.appendChild(recipeName);
   recipeTitle.appendChild(recipeTime);
-  recipeCardDetails.appendChild(recipeTitle);
+  recipeMapDetails.appendChild(recipeTitle);
   recipeMaking.appendChild(recipeIngredients);
-  recipeProcess.appendChild(recipeDescription);
-  recipeCardDetails.appendChild(recipeMaking);
+  recipeMaking.appendChild(recipeDescription);
+  recipeMapDetails.appendChild(recipeMaking);
+
+  recipeMap.classList.add("recipe-map");
+  recipeMapImage.classList.add("recipe-map-picture");
+  recipeMapDetails.classList.add("recipe-map-details");
+  recipeTitle.classList.add("recipe-map-title");
+  recipeName.classList.add("recipe-map-name");
+  recipeMaking.classList.add("recipe-process");
+  recipeIngredients.classList.add("recipe-ingredients");
+  recipeDescription.classList.add("recipe-description");
+
   return recipeMap;
 }
 
-function generateIngredients(ingredients, ingredientsElem) {
+function generateIngredients(ingredients, ingredientsElement) {
   ingredients.forEach((ingredient) => {
     const ingredientsDetails = document.createElement("span");
     ingredientsDetails.textContent = [
       [ingredient.ingredient, ingredient.quantity].join(": "),
       ingredient.unit ? ingredient.unit : "",
     ].join("");
-    ingredientsElem.appendChild(ingredientsDetails);
-    ingredientsElem.appendChild(document.createElement("br"));
+    ingredientsElement.appendChild(ingredientsDetails);
+    ingredientsElement.appendChild(document.createElement("br"));
   });
 }
