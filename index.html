@@ -14,31 +14,31 @@
 <body>
     <img src="./assets/logo.png" alt="Les petits Plats Homepage" class="logo-title" />
     <span class="search-bar-container">
-        <input id="search-recipe" placeholder="Rechercher un ingrédient, appareil, ustensiles ou une recette" />
+        <input id="search-recipe" placeholder="Rechercher un ingrédient, appareil, ustensiles ou une recette"
+            oninput="handleSearch()" />
         <i class="fa fa-search"></i>
     </span>
-    <aside></aside>
     <nav>
-        <div onclick="handleFilterBtn('ingredients')">
+        <div class="dropdown" onclick="handleFilterBtn('ingredients')">
             <button id="ingredients-btn" class="btn-filter">
-                <input oninput="handleFilterBtn('ingredients')" placeholder="Ingrédients" />
+                <input class="ingredients-input" oninput="handleFilterBtn('ingredients')" placeholder="Ingrédients" />
                 <i class="fa fa-chevron-down"></i>
-            </button>   
-            <div></div>
+            </button>
+            <div class="dropdown-ingredients"></div>
         </div>
-        <div onclick="handleFilterBtn('appareils')">
+        <div class="dropdown" onclick="handleFilterBtn('appareils')">
             <button id="appareils-btn" class="btn-filter">
-                <input placeholder="Appareils" oninput="handleFilterBtn('appareils')" />
+                <input placeholder="Appareils" class="appareils-input" oninput="handleFilterBtn('appareils')" />
                 <i class="fa fa-chevron-down"></i>
             </button>
-            <div></div>
+            <div class="dropdown-appareils"></div>
         </div>
-        <div onclick="handleFilterBtn('ustensiles')">
+        <div class="dropdown" onclick="handleFilterBtn('ustensiles')">
             <button id="ustensiles-btn" class="btn-filter">
-                <input placeholder="Ustensiles" oninput="handleFilterBtn('ustensiles')" />
+                <input placeholder="Ustensiles" class="ustensiles-input" oninput="handleFilterBtn('ustensiles')" />
                 <i class="fa fa-chevron-down"></i>
             </button>
-            <div></div>
+            <div class="dropdown-ustensiles"></div>
         </div>
     </nav>
 

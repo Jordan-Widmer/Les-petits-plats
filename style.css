@@ -111,14 +111,14 @@ nav {
 }
 
 .recipe-map-picture {
-  background-color: #C7BEBE;
+  background-color: #c7bebe;
   flex: 1 0 50%;
 }
 
 .recipe-map-details {
   padding: 0px 20px;
   justify-content: space-between;
-  background-color: #E7E7E7;
+  background-color: #e7e7e7;
   flex: 1 0 50%;
 }
 
@@ -154,7 +154,7 @@ nav {
   display: block;
   max-width: 50%;
   flex-shrink: 0;
-  font-size: .75rem;
+  font-size: 0.75rem;
   font-weight: bold;
   font-family: "Roboto";
 }
