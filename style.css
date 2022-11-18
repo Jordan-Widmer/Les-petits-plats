@@ -167,3 +167,42 @@ nav {
   max-height: 72px;
   font-family: "Roboto";
 }
+
+.ingredient-filter-item {
+  background-color: #3282F7;
+  color: white;
+  border-radius: 5px;
+  padding: 5px 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 37px;
+  font-size: 14px;
+}
+
+.appareil-filter-item {
+  color: white;
+  background-color: #68D9A4;
+  border-radius: 5px;
+  padding: 5px 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 37px;
+  font-size: 14px;
+}
+
+.ustensil-filter-item {
+  background-color: #ED6454;
+  color: white;
+  border-radius: 5px;
+  padding: 5px 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 37px;
+  font-size: 14px;
+}

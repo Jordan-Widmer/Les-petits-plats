@@ -94,3 +94,30 @@ function handleSearch() {
 }
 
 window.handleSearch = handleSearch;
+
+function displayActiveFilter(filterText, category) {
+  const activeFilter = document.createElement("span");
+  const deleteIcon = document.createElement("i");
+  deleteIcon.classList.add("fa", "fa-times-circle-o", "fa-2xl");
+  activeFilter.textContent = filterText;
+  activeFilter.appendChild(deleteIcon);
+
+  switch (category) {
+    case "ingredients":
+      activeFilter.classList.add("ingredient-filter-item");
+      break;
+    case "ustensiles":
+      activeFilter.classList.add("ustensil-filter-item");
+      break;
+    case "appareils":
+      activeFilter.classList.add("appareil-filter-item");
+      break;
+  }
+  activeFilter.addEventListener("click", () => {
+    removeActiveFilter(
+      activeFilter,
+      Array.from(activeFilter.parentElement.children).indexOf(activeFilter)
+    );
+  });
+  document.querySelector(".active-filter-list").appendChild(activeFilter);
+}
