@@ -5,7 +5,6 @@ body {
   padding: 20px;
   max-width: 1280px;
 }
-
 .logo-title {
   display: flex;
   width: 330px;
@@ -13,7 +12,6 @@ body {
   padding-top: 40px;
   padding-bottom: 20px;
 }
-
 .fa.fa-search {
   position: absolute;
   right: 20px;
@@ -27,13 +25,11 @@ body {
   width: 32px;
   height: 32px;
 }
-
 .search-bar-container {
   display: block;
   position: relative;
   margin-bottom: 32px;
 }
-
 #search-recipe {
   width: 100%;
   height: 70px;
@@ -47,13 +43,11 @@ body {
   text-overflow: ellipsis;
   font-size: 1.125rem;
 }
-
 nav {
   margin: 20px 0px 25px;
   display: flex;
   gap: 20px;
 }
-
 .btn-filter {
   padding: 20px;
   border: none;
@@ -66,7 +60,6 @@ nav {
   justify-content: space-between;
   align-items: center;
 }
-
 .btn-filter input {
   color: #fff;
   background-color: transparent;
@@ -78,27 +71,21 @@ nav {
   cursor: pointer;
   width: 100%;
 }
-
 .btn-filter input::placeholder {
   color: #fff;
 }
-
 .fa-chevron-down {
   color: #fff;
 }
-
 #ingredients-btn {
   background-color: #3382f7;
 }
-
 #appareils-btn {
   background-color: #68d9a4;
 }
-
 #ustensiles-btn {
   background-color: #ed6454;
 }
-
 .recipe-map {
   display: flex;
   flex-direction: column;
@@ -109,19 +96,16 @@ nav {
   width: 393px;
   height: 380px;
 }
-
 .recipe-map-picture {
   background-color: #c7bebe;
   flex: 1 0 50%;
 }
-
 .recipe-map-details {
   padding: 0px 20px;
   justify-content: space-between;
   background-color: #e7e7e7;
   flex: 1 0 50%;
 }
-
 .recipe-map-title {
   display: flex;
   width: 100%;
@@ -132,24 +116,20 @@ nav {
   text-overflow: ellipsis;
   gap: 20px;
 }
-
 .recipe-map-name {
   font-weight: lighter;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-
 .recipe-map-title h2 {
   font-weight: 400;
   font-size: 1.125rem;
 }
-
 .recipe-process {
   display: flex;
   flex-direction: row;
   gap: 20px;
 }
-
 .recipe-ingredients {
   display: block;
   max-width: 50%;
@@ -158,7 +138,6 @@ nav {
   font-weight: bold;
   font-family: "Roboto";
 }
-
 .recipe-description {
   overflow: hidden;
   font-size: 12px;
@@ -167,9 +146,8 @@ nav {
   max-height: 72px;
   font-family: "Roboto";
 }
-
 .ingredient-filter-item {
-  background-color: #3282F7;
+  background-color: #3282f7;
   color: white;
   border-radius: 5px;
   padding: 5px 15px;
@@ -180,10 +158,9 @@ nav {
   height: 37px;
   font-size: 14px;
 }
-
 .appareil-filter-item {
   color: white;
-  background-color: #68D9A4;
+  background-color: #68d9a4;
   border-radius: 5px;
   padding: 5px 15px;
   cursor: pointer;
@@ -193,9 +170,8 @@ nav {
   height: 37px;
   font-size: 14px;
 }
-
 .ustensil-filter-item {
-  background-color: #ED6454;
+  background-color: #ed6454;
   color: white;
   border-radius: 5px;
   padding: 5px 15px;
@@ -205,4 +181,16 @@ nav {
   gap: 10px;
   height: 37px;
   font-size: 14px;
+}
+.filter-item {
+  flex: 1 1 30%;
+  font-size: 18px;
+  line-height: 22px;
+  padding: 5px;
+}
+.filter-text {
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  width: fit-content;
 }

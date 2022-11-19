@@ -111,7 +111,7 @@ function displayActiveFilter(filterText, category) {
       break;
     case "appareils":
       activeFilter.classList.add("appareil-filter-item");
-      break;
+      break; //add cxolor to filters
   }
   activeFilter.addEventListener("click", () => {
     removeActiveFilter(
@@ -121,3 +121,66 @@ function displayActiveFilter(filterText, category) {
   });
   document.querySelector(".active-filter-list").appendChild(activeFilter);
 }
+
+function removeActiveFilter(filter, index) {
+  filter.remove();
+  activeFilterList.splice(index, 1);
+  activeFilterListState.splice(index, 1);
+  if (document.querySelector("#search-recipe").value) {
+    if (activeFilterList.length == 0) {
+      currentlyDisplayedRecipes = recipes;
+    }
+    handleSearch();
+    return;
+  }
+
+  if (activeFilterList.length == 0) {
+    displayRecipes(recipes);
+    return;
+  }
+  displayFilteredRecipes();
+}
+
+function addFiltersRecipes(filterName, filterType) {
+  activeFilterList.push(mappedList[filterType][filterName]);
+  activeFilterListState.push([filterType, filterName]);
+  displayFilteredRecipes();
+}
+
+function regenerateFilters() {
+  const tempActiveFilterList = [];
+  activeFilterListState.forEach((filter) => {
+    tempActiveFilterList.push(mappedList[filter[0]][filter[1]]);
+  });
+  activeFilterList = tempActiveFilterList;
+}
+
+function handleFilterBtn(category) {
+  const dropdownFilter = document.querySelector(".dropdown-" + category);
+  dropdownFilter.replaceChildren();
+  filtersList[category].forEach((filter, x) => {
+    if (
+      filter
+        .toLowerCase()
+        .includes(
+          document.querySelector("." + category + "-input").value.toLowerCase()
+        ) ||
+      document.querySelector("." + category + "-input").value == ""
+    ) {
+      const filterItem = document.createElement("span");
+      const filterText = document.createElement("p");
+      filterItem.classList.add("filter-item");
+      filterText.classList.add("filter-text");
+      filterText.textContent = filter;
+      filterItem.appendChild(filterText);
+      dropdownFilter.appendChild(filterItem);
+      filterText.setAttribute("tabindex", x); // so it dont focuout on click on children
+      filterText.addEventListener("click", () => {
+        addFiltersRecipes(filterText.textContent, category);
+        displayActiveFilter(filterText.textContent, category);
+        document.querySelector("." + category + "-input").focus();
+      });
+    }
+  });
+}
+window.handleFilterBtn = handleFilterBtn;
