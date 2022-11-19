@@ -111,7 +111,7 @@ function displayActiveFilter(filterText, category) {
       break;
     case "appareils":
       activeFilter.classList.add("appareil-filter-item");
-      break; //add cxolor to filters
+      break;
   }
   activeFilter.addEventListener("click", () => {
     removeActiveFilter(
