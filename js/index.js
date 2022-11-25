@@ -2,8 +2,16 @@ import * as data from "./data/recipes.js";
 import * as factory from "./factory.js";
 
 const recipes = data.recipes;
-let filtersList = { ingredients: [], ustensiles: [], appareils: [] };
-let mappedList = { ingredients: [], ustensiles: [], appareils: [] };
+let filtersList = {
+  ingrédients: [],
+  ustensiles: [],
+  appareils: [],
+};
+let mappedList = {
+  ingrédients: [],
+  ustensiles: [],
+  appareils: [],
+};
 let activeFilterList = [];
 let activeFilterListState = [];
 let currentlyDisplayedRecipes = recipes;
@@ -12,12 +20,20 @@ const recipeSection = document.querySelector("#recipe-list");
 
 function displayRecipes(recipeList) {
   recipeSection.replaceChildren();
-  filtersList = { ingredients: [], ustensiles: [], appareils: [] };
-  mappedList = { ingredients: [], ustensiles: [], appareils: [] };
+  filtersList = {
+    ingrédients: [],
+    ustensiles: [],
+    appareils: [],
+  };
+  mappedList = {
+    ingrédients: [],
+    ustensiles: [],
+    appareils: [],
+  };
   recipeList.forEach((recipe) => {
     recipeSection.appendChild(factory.generateRecipeMap(recipe));
     populateFiltersAndMap(
-      recipe.ingredients,
+      recipe.ingrédients,
       recipe.ustensils,
       recipe.appliance,
       recipe
@@ -27,7 +43,7 @@ function displayRecipes(recipeList) {
 }
 
 const eventListenerList = [
-  [document.querySelector(".ingredients-input"), "ingredients"],
+  [document.querySelector(".ingrédients-input"), "ingrédients"],
   [document.querySelector(".appareils-input"), "appareils"],
   [document.querySelector(".ustensiles-input"), "ustensiles"],
 ];
@@ -73,7 +89,7 @@ function handleSearch() {
   for (const recipe in currentlyDisplayedRecipes) {
     for (const word in searchContent) {
       if (
-        currentlyDisplayedRecipes[recipe].ingredients.includes(
+        currentlyDisplayedRecipes[recipe].ingrédients.includes(
           searchContent[word]
         ) ||
         currentlyDisplayedRecipes[recipe].description.includes(
@@ -103,8 +119,8 @@ function displayActiveFilter(filterText, category) {
   activeFilter.appendChild(deleteIcon);
 
   switch (category) {
-    case "ingredients":
-      activeFilter.classList.add("ingredient-filter-item");
+    case "ingrédients":
+      activeFilter.classList.add("ingrédient-filter-item");
       break;
     case "ustensiles":
       activeFilter.classList.add("ustensil-filter-item");
@@ -155,6 +171,32 @@ function regenerateFilters() {
   activeFilterList = tempActiveFilterList;
 }
 
+function displayFilteredRecipes() {
+  const flattedList = activeFilterList.flat(1);
+  const filteredData = flattedList.filter(
+    (a, index) =>
+      flattedList.indexOf(a) === index &&
+      flattedList.reduce((acc, b) => +(a === b) + acc, 0) ===
+        activeFilterList.length
+  );
+  currentlyDisplayedRecipes = filteredData;
+  displayRecipes(filteredData);
+}
+
+function populateFiltersAndMap(ingrédients, recipe) {
+  if (Array.isArray(ingrédients)) {
+    ingrédients.forEach((ingrédient) => {
+      ingrédient.ingrédient = normalizeFilter(ingrédient.ingrédient);
+      filtersList.ingrédients.includes(ingrédient.ingrédient)
+        ? null
+        : filtersList.ingrédients.push(ingrédient.ingrédient);
+      mappedList.ingrédients[ingrédient.ingrédient]
+        ? mappedList.ingrédients[ingrédient.ingrédient].push(recipe)
+        : (mappedList.ingrédients[ingrédient.ingrédient] = [recipe]);
+    });
+  }
+}
+
 function handleFilterBtn(category) {
   const dropdownFilter = document.querySelector(".dropdown-" + category);
   dropdownFilter.replaceChildren();
@@ -174,7 +216,7 @@ function handleFilterBtn(category) {
       filterText.textContent = filter;
       filterItem.appendChild(filterText);
       dropdownFilter.appendChild(filterItem);
-      filterText.setAttribute("tabindex", x); // so it dont focuout on click on children
+      filterText.setAttribute("tabindex", x);
       filterText.addEventListener("click", () => {
         addFiltersRecipes(filterText.textContent, category);
         displayActiveFilter(filterText.textContent, category);

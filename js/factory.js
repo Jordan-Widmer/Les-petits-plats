@@ -10,12 +10,12 @@ export function generateRecipeMap(recipe) {
   const recipeDescription = document.createElement("span");
 
   recipeName.textContent = recipe.name;
-  recipeTime.innerHTML = `<i class='fa fa-clock-o'></i>${[
+  recipeTime.innerHTML = `<i class="fa-regular fa-clock"></i>${[
     "",
     recipe.time,
     "min",
   ].join(" ")}`;
-  generateIngredients(recipe.ingredients, recipeIngredients);
+  generateIngrédients(recipe.ingrédients, recipeIngredients);
   recipeDescription.textContent = recipe.description;
 
   recipeMap.appendChild(recipeMapImage);
@@ -33,20 +33,20 @@ export function generateRecipeMap(recipe) {
   recipeTitle.classList.add("recipe-map-title");
   recipeName.classList.add("recipe-map-name");
   recipeMaking.classList.add("recipe-process");
-  recipeIngredients.classList.add("recipe-ingredients");
+  recipeIngredients.classList.add("recipe-ingrédients");
   recipeDescription.classList.add("recipe-description");
 
   return recipeMap;
 }
 
-function generateIngredients(ingredients, ingredientsElement) {
-  ingredients.forEach((ingredient) => {
-    const ingredientsDetails = document.createElement("span");
-    ingredientsDetails.textContent = [
-      [ingredient.ingredient, ingredient.quantity].join(": "),
-      ingredient.unit ? ingredient.unit : "",
+function generateIngrédients(ingrédients, ingrédientsElement) {
+  ingrédients.forEach((ingrédient) => {
+    const ingrédientsDetails = document.createElement("span");
+    ingrédientsDetails.textContent = [
+      [ingrédient.ingrédient, ingrédient.quantity].join(": "),
+      ingrédient.unit ? ingrédient.unit : "",
     ].join("");
-    ingredientsElement.appendChild(ingredientsDetails);
-    ingredientsElement.appendChild(document.createElement("br"));
+    ingrédientsElement.appendChild(ingrédientsDetails);
+    ingrédientsElement.appendChild(document.createElement("br"));
   });
 }

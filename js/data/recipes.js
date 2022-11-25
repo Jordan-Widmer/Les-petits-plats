@@ -3,12 +3,12 @@ export const recipes = [
     id: 1,
     name: "Limonade de Coco",
     servings: 1,
-    ingredients: [
-      { ingredient: "Lait de coco", quantity: 400, unit: "ml" },
-      { ingredient: "Jus de citron", quantity: 2 },
-      { ingredient: "Crème de coco", quantity: 2, unit: " cuillères à soupe" },
-      { ingredient: "Sucre", quantity: 30, unit: " grammes" },
-      { ingredient: "Glaçons" },
+    ingrédients: [
+      { ingrédient: "Lait de coco", quantity: 400, unit: "ml" },
+      { ingrédient: "Jus de citron", quantity: 2 },
+      { ingrédient: "Crème de coco", quantity: 2, unit: " cuillères à soupe" },
+      { ingrédient: "Sucre", quantity: 30, unit: " grammes" },
+      { ingrédient: "Glaçons" },
     ],
     time: 10,
     description:
@@ -20,13 +20,13 @@ export const recipes = [
     id: 2,
     name: "Poisson Cru à la tahitienne",
     servings: 2,
-    ingredients: [
-      { ingredient: "Thon Rouge (ou blanc)", quantity: 200, unit: "grammes" },
-      { ingredient: "Concombre", quantity: 1 },
-      { ingredient: "Tomate", quantity: 2 },
-      { ingredient: "Carotte", quantity: 1 },
-      { ingredient: "Citron Vert", quantity: 5 },
-      { ingredient: "Lait de Coco", quantity: 100, unit: "ml" },
+    ingrédients: [
+      { ingrédient: "Thon Rouge (ou blanc)", quantity: 200, unit: "grammes" },
+      { ingrédient: "Concombre", quantity: 1 },
+      { ingrédient: "Tomate", quantity: 2 },
+      { ingrédient: "Carotte", quantity: 1 },
+      { ingrédient: "Citron Vert", quantity: 5 },
+      { ingrédient: "Lait de Coco", quantity: 100, unit: "ml" },
     ],
     time: 60,
     description:
@@ -38,13 +38,13 @@ export const recipes = [
     id: 3,
     name: "Poulet coco réunionnais",
     servings: 4,
-    ingredients: [
-      { ingredient: "Poulet", quantity: 1 },
-      { ingredient: "Lait de coco", quantity: 400, unit: "ml" },
-      { ingredient: "Coulis de tomate", quantity: 25, unit: "cl" },
-      { ingredient: "Oignon", quantity: 1 },
-      { ingredient: "Poivron rouge", quantity: 1 },
-      { ingredient: "Huile d'olive", quantity: 1, unit: "cuillères à soupe" },
+    ingrédients: [
+      { ingrédient: "Poulet", quantity: 1 },
+      { ingrédient: "Lait de coco", quantity: 400, unit: "ml" },
+      { ingrédient: "Coulis de tomate", quantity: 25, unit: "cl" },
+      { ingrédient: "Oignon", quantity: 1 },
+      { ingrédient: "Poivron rouge", quantity: 1 },
+      { ingrédient: "Huile d'olive", quantity: 1, unit: "cuillères à soupe" },
     ],
     time: 80,
     description:
@@ -56,13 +56,13 @@ export const recipes = [
     id: 4,
     name: "Salade de riz",
     servings: 4,
-    ingredients: [
-      { ingredient: "Riz blanc", quantity: 500, unit: "grammes" },
-      { ingredient: "Thon en miettes", quantity: 200, unit: "grammes" },
-      { ingredient: "Tomate", quantity: 2 },
-      { ingredient: "Oeuf dur", quantity: 2 },
-      { ingredient: "Maïs", quantity: 300, unit: "grammes" },
-      { ingredient: "Vinaigrette", quantity: 5, unit: "cl" },
+    ingrédients: [
+      { ingrédient: "Riz blanc", quantity: 500, unit: "grammes" },
+      { ingrédient: "Thon en miettes", quantity: 200, unit: "grammes" },
+      { ingrédient: "Tomate", quantity: 2 },
+      { ingrédient: "Oeuf dur", quantity: 2 },
+      { ingrédient: "Maïs", quantity: 300, unit: "grammes" },
+      { ingrédient: "Vinaigrette", quantity: 5, unit: "cl" },
     ],
     time: 50,
     description:
@@ -74,14 +74,14 @@ export const recipes = [
     id: 5,
     name: "Tarte au thon",
     servings: 4,
-    ingredients: [
-      { ingredient: "Pâte feuilletée", quantity: 1 },
-      { ingredient: "Thon en miettes", quantity: 130, unit: "grammes" },
-      { ingredient: "Tomate", quantity: 2 },
-      { ingredient: "Crème fraîche", quantity: 2, unit: "cuillères à soupe" },
-      { ingredient: "gruyère râpé", quantity: 100, unit: "grammes" },
+    ingrédients: [
+      { ingrédient: "Pâte feuilletée", quantity: 1 },
+      { ingrédient: "Thon en miettes", quantity: 130, unit: "grammes" },
+      { ingrédient: "Tomate", quantity: 2 },
+      { ingrédient: "Crème fraîche", quantity: 2, unit: "cuillères à soupe" },
+      { ingrédient: "gruyère râpé", quantity: 100, unit: "grammes" },
       {
-        ingredient: "Moutarde de Dijon",
+        ingrédient: "Moutarde de Dijon",
         quantity: 1,
         unite: "cuillères à soupe",
       },
@@ -96,13 +96,13 @@ export const recipes = [
     id: 6,
     name: "Tarte aux pommes",
     servings: 6,
-    ingredients: [
-      { ingredient: "Pâte brisée", quantity: 1 },
-      { ingredient: "Pomme", quantity: 3 },
-      { ingredient: "Oeuf", quantity: "2" },
-      { ingredient: "Crème fraîche", quantity: 25, unit: "cl" },
-      { ingredient: "Sucre en Poudre", quantity: 100, unit: "grammes" },
-      { ingredient: "Sucre vanillé", quantity: 1, unit: "sachets" },
+    ingrédients: [
+      { ingrédient: "Pâte brisée", quantity: 1 },
+      { ingrédient: "Pomme", quantity: 3 },
+      { ingrédient: "Oeuf", quantity: "2" },
+      { ingrédient: "Crème fraîche", quantity: 25, unit: "cl" },
+      { ingrédient: "Sucre en Poudre", quantity: 100, unit: "grammes" },
+      { ingrédient: "Sucre vanillé", quantity: 1, unit: "sachets" },
     ],
     time: 50,
     description:
@@ -114,12 +114,12 @@ export const recipes = [
     id: 7,
     name: "Tartelettes au chocolat et aux fraises",
     servings: 6,
-    ingredients: [
-      { ingredient: "Pâte sablée", quantity: 1 },
-      { ingredient: "Chocolat au lait", quantity: 300, unit: "grammes" },
-      { ingredient: "Crème liquide", quantity: 80, unit: "cl" },
-      { ingredient: "Beurre", quantity: "30", unit: "grammes" },
-      { ingredient: "Fraise", quantity: 6 },
+    ingrédients: [
+      { ingrédient: "Pâte sablée", quantity: 1 },
+      { ingrédient: "Chocolat au lait", quantity: 300, unit: "grammes" },
+      { ingrédient: "Crème liquide", quantity: 80, unit: "cl" },
+      { ingrédient: "Beurre", quantity: "30", unit: "grammes" },
+      { ingrédient: "Fraise", quantity: 6 },
     ],
     time: 50,
     description:
@@ -131,13 +131,13 @@ export const recipes = [
     id: 8,
     name: "Brownie",
     servings: 10,
-    ingredients: [
-      { ingredient: "Noix", quantity: "180", unit: "grammes" },
-      { ingredient: "Chocolat noir", quantity: 150, unit: "grammes" },
-      { ingredient: "Beurre", quantity: 120, unit: "grammes" },
-      { ingredient: "Oeuf", quantity: 2 },
-      { ingredient: "Sucre en Poudre", quantity: "110", unit: "grammes" },
-      { ingredient: "farine", quantity: 90, unit: "grammes" },
+    ingrédients: [
+      { ingrédient: "Noix", quantity: "180", unit: "grammes" },
+      { ingrédient: "Chocolat noir", quantity: 150, unit: "grammes" },
+      { ingrédient: "Beurre", quantity: 120, unit: "grammes" },
+      { ingrédient: "Oeuf", quantity: 2 },
+      { ingrédient: "Sucre en Poudre", quantity: "110", unit: "grammes" },
+      { ingrédient: "farine", quantity: 90, unit: "grammes" },
     ],
     time: 60,
     description:
@@ -149,13 +149,13 @@ export const recipes = [
     id: 9,
     name: "Salade Méditerannéene fraîche au chèvre",
     servings: 4,
-    ingredients: [
-      { ingredient: "Concombre", quantity: 1 },
-      { ingredient: "Olives" },
-      { ingredient: "Fromage de chèvre", quantity: 150, unit: "grammes" },
-      { ingredient: "Vinaigre Balsamic" },
-      { ingredient: "Huile d'olive" },
-      { ingredient: "Basilic" },
+    ingrédients: [
+      { ingrédient: "Concombre", quantity: 1 },
+      { ingrédient: "Olives" },
+      { ingrédient: "Fromage de chèvre", quantity: 150, unit: "grammes" },
+      { ingrédient: "Vinaigre Balsamic" },
+      { ingrédient: "Huile d'olive" },
+      { ingrédient: "Basilic" },
     ],
     time: 15,
     description:
@@ -167,12 +167,12 @@ export const recipes = [
     id: 10,
     name: "Tartiflette",
     servings: 4,
-    ingredients: [
-      { ingredient: "Reblochon", quantity: "1" },
-      { ingredient: "Pommes de terre", quantity: 4.5, unit: "kg" },
-      { ingredient: "Jambon fumé", quantity: 2, unit: "tranches" },
-      { ingredient: "Oignon", quantity: 300, unit: "grammes" },
-      { ingredient: "Vin blanc sec", quantity: 30, unit: "cl" },
+    ingrédients: [
+      { ingrédient: "Reblochon", quantity: "1" },
+      { ingrédient: "Pommes de terre", quantity: 4.5, unit: "kg" },
+      { ingrédient: "Jambon fumé", quantity: 2, unit: "tranches" },
+      { ingrédient: "Oignon", quantity: 300, unit: "grammes" },
+      { ingrédient: "Vin blanc sec", quantity: 30, unit: "cl" },
     ],
     time: 60,
     description:
@@ -184,13 +184,13 @@ export const recipes = [
     id: 11,
     name: "Salade tomate, mozzarella et pommes",
     servings: 4,
-    ingredients: [
-      { ingredient: "Tomates cerises", quantity: 250, unit: "grammes" },
-      { ingredient: "Mozzarella", quantity: 150, unit: "grammes" },
-      { ingredient: "Jambon de parme", quantity: 4, unit: "tranches" },
-      { ingredient: "Pommes", quantity: 1 },
-      { ingredient: "Salade Verte", quantity: 1 },
-      { ingredient: "Vinaigrette", quantity: 5, unit: "cl" },
+    ingrédients: [
+      { ingrédient: "Tomates cerises", quantity: 250, unit: "grammes" },
+      { ingrédient: "Mozzarella", quantity: 150, unit: "grammes" },
+      { ingrédient: "Jambon de parme", quantity: 4, unit: "tranches" },
+      { ingrédient: "Pommes", quantity: 1 },
+      { ingrédient: "Salade Verte", quantity: 1 },
+      { ingrédient: "Vinaigrette", quantity: 5, unit: "cl" },
     ],
     time: 10,
     description:
@@ -202,11 +202,11 @@ export const recipes = [
     id: 12,
     name: "Compote pomme rhubarbe",
     servings: 4,
-    ingredients: [
-      { ingredient: "Rhubarbe", quantity: 160, unit: "grammes" },
-      { ingredient: "Pommes", quantity: 8 },
-      { ingredient: "Sucre vanillé", quantity: 6, unit: "sachets" },
-      { ingredient: "Eau", quantity: "0.5", unit: "tasses" },
+    ingrédients: [
+      { ingrédient: "Rhubarbe", quantity: 160, unit: "grammes" },
+      { ingrédient: "Pommes", quantity: 8 },
+      { ingrédient: "Sucre vanillé", quantity: 6, unit: "sachets" },
+      { ingrédient: "Eau", quantity: "0.5", unit: "tasses" },
     ],
     time: 40,
     description:
@@ -218,16 +218,16 @@ export const recipes = [
     id: 13,
     name: "Salade mâchée de patates",
     servings: 2,
-    ingredients: [
-      { ingredient: "Mâche", quantity: 60, unit: "grammes" },
-      { ingredient: "Pommes de terre", quantity: 200, unit: "grammes" },
-      { ingredient: "Échalote", quantity: 2 },
+    ingrédients: [
+      { ingrédient: "Mâche", quantity: 60, unit: "grammes" },
+      { ingrédient: "Pommes de terre", quantity: 200, unit: "grammes" },
+      { ingrédient: "Échalote", quantity: 2 },
       {
-        ingredient: "Vinaigre de cidre",
+        ingrédient: "Vinaigre de cidre",
         quantity: 1,
         unit: "cuillère à soupe",
       },
-      { ingredient: "huile d'olive", quantity: 2, unit: "cuillère à soupe" },
+      { ingrédient: "huile d'olive", quantity: 2, unit: "cuillère à soupe" },
     ],
     time: 40,
     description:
@@ -239,13 +239,13 @@ export const recipes = [
     id: 14,
     name: "Galette Bretonne Saucisse et Fromage à raclette",
     servings: 2,
-    ingredients: [
-      { ingredient: "Saucisse bretonne ou de Toulouse", quantity: 2 },
-      { ingredient: "Farine de blé noir", quantity: 130, unit: "grammes" },
-      { ingredient: "Oeuf", quantity: 1 },
-      { ingredient: "Fromage à raclette", quantity: 300, unit: "grammes" },
-      { ingredient: "Oignon", quantity: 1 },
-      { ingredient: "Beurre", quantity: 75, unit: "grammes" },
+    ingrédients: [
+      { ingrédient: "Saucisse bretonne ou de Toulouse", quantity: 2 },
+      { ingrédient: "Farine de blé noir", quantity: 130, unit: "grammes" },
+      { ingrédient: "Oeuf", quantity: 1 },
+      { ingrédient: "Fromage à raclette", quantity: 300, unit: "grammes" },
+      { ingrédient: "Oignon", quantity: 1 },
+      { ingrédient: "Beurre", quantity: 75, unit: "grammes" },
     ],
     time: 100,
     description:
@@ -257,13 +257,13 @@ export const recipes = [
     id: 15,
     name: "Crêpes Chocolat Banane",
     servings: 10,
-    ingredients: [
-      { ingredient: "Oeuf", quantity: 3 },
-      { ingredient: "Farine", quantity: 250, unit: "grammes" },
-      { ingredient: "Lait", quantity: 600, unit: "ml" },
-      { ingredient: "Beurre salé", quantity: 30, unit: "grammes" },
-      { ingredient: "Chocolat au lait", quantity: 100, unit: "grammes" },
-      { ingredient: "Banane", quantity: 4 },
+    ingrédients: [
+      { ingrédient: "Oeuf", quantity: 3 },
+      { ingrédient: "Farine", quantity: 250, unit: "grammes" },
+      { ingrédient: "Lait", quantity: 600, unit: "ml" },
+      { ingrédient: "Beurre salé", quantity: 30, unit: "grammes" },
+      { ingrédient: "Chocolat au lait", quantity: 100, unit: "grammes" },
+      { ingrédient: "Banane", quantity: 4 },
     ],
     time: 60,
     description:
@@ -275,12 +275,12 @@ export const recipes = [
     id: 16,
     name: "Gratin de pâtes à la tomate",
     servings: 2,
-    ingredients: [
-      { ingredient: "Tomate", quantity: 500, unit: "grammes" },
-      { ingredient: "Mozzarella", quantity: 250, unit: "grammes" },
-      { ingredient: "Pennes", quantity: 500, unit: "grammes" },
-      { ingredient: "Basilic", quantity: 1, unit: "tiges" },
-      { ingredient: "huile d'olives", quantity: 2, unit: "cuillère à soupe" },
+    ingrédients: [
+      { ingrédient: "Tomate", quantity: 500, unit: "grammes" },
+      { ingrédient: "Mozzarella", quantity: 250, unit: "grammes" },
+      { ingrédient: "Pennes", quantity: 500, unit: "grammes" },
+      { ingrédient: "Basilic", quantity: 1, unit: "tiges" },
+      { ingrédient: "huile d'olives", quantity: 2, unit: "cuillère à soupe" },
     ],
     time: 45,
     description:
@@ -292,12 +292,12 @@ export const recipes = [
     id: 17,
     name: "Smoothie à la fraise",
     servings: 6,
-    ingredients: [
-      { ingredient: "Fraise", quantity: 500, unit: "grammes" },
-      { ingredient: "Pastèque", quantity: 0.5 },
-      { ingredient: "Jus de citron", quantity: 1, unit: "cuillères à soupe" },
-      { ingredient: "Glaçons", quantity: 8 },
-      { ingredient: "Menthe" },
+    ingrédients: [
+      { ingrédient: "Fraise", quantity: 500, unit: "grammes" },
+      { ingrédient: "Pastèque", quantity: 0.5 },
+      { ingrédient: "Jus de citron", quantity: 1, unit: "cuillères à soupe" },
+      { ingrédient: "Glaçons", quantity: 8 },
+      { ingrédient: "Menthe" },
     ],
     time: 15,
     description:
@@ -309,13 +309,13 @@ export const recipes = [
     id: 18,
     name: "Smoothie ananas et vanille",
     servings: 5,
-    ingredients: [
+    ingrédients: [
       {
-        ingredient: "Ananas",
+        ingrédient: "Ananas",
         quantity: 1,
       },
-      { ingredient: "Glace à la vanille", quantity: 500, unit: "ml" },
-      { ingredient: "Lait", quantity: 50, unit: "cl" },
+      { ingrédient: "Glace à la vanille", quantity: 500, unit: "ml" },
+      { ingrédient: "Lait", quantity: 50, unit: "cl" },
     ],
     time: 10,
     description:
@@ -327,12 +327,12 @@ export const recipes = [
     id: 19,
     name: "Shake Banane Kiwi",
     servings: 4,
-    ingredients: [
-      { ingredient: "Kiwi", quantity: 4 },
-      { ingredient: "Citron", quantity: 1 },
-      { ingredient: "Lait", quantity: 1, unit: "litres" },
-      { ingredient: "Sucre glace", quantity: 30, unit: "grammes" },
-      { ingredient: "Banane", quantity: 1 },
+    ingrédients: [
+      { ingrédient: "Kiwi", quantity: 4 },
+      { ingrédient: "Citron", quantity: 1 },
+      { ingrédient: "Lait", quantity: 1, unit: "litres" },
+      { ingrédient: "Sucre glace", quantity: 30, unit: "grammes" },
+      { ingrédient: "Banane", quantity: 1 },
     ],
     time: 0,
     description:
@@ -344,12 +344,12 @@ export const recipes = [
     id: 20,
     name: "Pates Carbonara",
     servings: 5,
-    ingredients: [
-      { ingredient: "Tagliatelles", quantity: 500, unit: "grammes" },
-      { ingredient: "Lardons", quantity: 150, unit: "grammes" },
-      { ingredient: "Crème fraîche", quantity: 200, unit: "grammes" },
-      { ingredient: "Parmesan", quantity: 100, unit: "grammes" },
-      { ingredient: "huile d'olive", quantity: 1, unit: "cuillères à soupe" },
+    ingrédients: [
+      { ingrédient: "Tagliatelles", quantity: 500, unit: "grammes" },
+      { ingrédient: "Lardons", quantity: 150, unit: "grammes" },
+      { ingrédient: "Crème fraîche", quantity: 200, unit: "grammes" },
+      { ingrédient: "Parmesan", quantity: 100, unit: "grammes" },
+      { ingrédient: "huile d'olive", quantity: 1, unit: "cuillères à soupe" },
     ],
     time: 30,
     description:
@@ -361,21 +361,21 @@ export const recipes = [
     id: 21,
     name: "Spaghettis à la bolognaise",
     servings: 4,
-    ingredients: [
-      { ingredient: "Spaghettis", quantity: 400, unit: "grammes" },
-      { ingredient: "Oignon", quantity: 2 },
-      { ingredient: "Coulis de tomate", quantity: 300, unit: "grammes" },
+    ingrédients: [
+      { ingrédient: "Spaghettis", quantity: 400, unit: "grammes" },
+      { ingrédient: "Oignon", quantity: 2 },
+      { ingrédient: "Coulis de tomate", quantity: 300, unit: "grammes" },
       {
-        ingredient: "Viande hachée 1% de matière grasse",
+        ingrédient: "Viande hachée 1% de matière grasse",
         quantity: 400,
         unit: "grammes",
       },
       {
-        ingredient: "Vin rouge",
+        ingrédient: "Vin rouge",
         quantity: 20,
         unit: "cl",
       },
-      { ingredient: "Crème fraîche", quantity: 1, unit: "cuillères à soupe" },
+      { ingrédient: "Crème fraîche", quantity: 1, unit: "cuillères à soupe" },
     ],
     time: 30,
     description:
@@ -387,12 +387,12 @@ export const recipes = [
     id: 22,
     name: "Fondant au chocolat",
     servings: 4,
-    ingredients: [
-      { ingredient: "Beurre", quantity: 160, unit: "grammes" },
-      { ingredient: "Chocolat noir", quantity: 200, unit: "grammes" },
-      { ingredient: "Farine", quantity: 50, unit: "grammes" },
-      { ingredient: "Oeuf", quantity: 4 },
-      { ingredient: "Sucre", quantity: 150, unit: "grammes" },
+    ingrédients: [
+      { ingrédient: "Beurre", quantity: 160, unit: "grammes" },
+      { ingrédient: "Chocolat noir", quantity: 200, unit: "grammes" },
+      { ingrédient: "Farine", quantity: 50, unit: "grammes" },
+      { ingrédient: "Oeuf", quantity: 4 },
+      { ingrédient: "Sucre", quantity: 150, unit: "grammes" },
     ],
     time: 30,
     description:
@@ -404,13 +404,13 @@ export const recipes = [
     id: 23,
     name: "Quiche lorraine",
     servings: 4,
-    ingredients: [
-      { ingredient: "Pâte brisée", quantity: 200, unit: "grammes" },
-      { ingredient: "Lardons", quantity: 200, unit: "grammes" },
-      { ingredient: "Beurre", quantity: 30, unit: "grammes" },
-      { ingredient: "Oeuf", quantity: 3 },
-      { ingredient: "Crème Fraîche", quantity: 20, unit: "cl" },
-      { ingredient: "Lait", quantity: 20, unit: "cl" },
+    ingrédients: [
+      { ingrédient: "Pâte brisée", quantity: 200, unit: "grammes" },
+      { ingrédient: "Lardons", quantity: 200, unit: "grammes" },
+      { ingrédient: "Beurre", quantity: 30, unit: "grammes" },
+      { ingrédient: "Oeuf", quantity: 3 },
+      { ingrédient: "Crème Fraîche", quantity: 20, unit: "cl" },
+      { ingrédient: "Lait", quantity: 20, unit: "cl" },
     ],
     time: 60,
     description:
@@ -422,13 +422,13 @@ export const recipes = [
     id: 24,
     name: "Salade de pâtes",
     servings: 4,
-    ingredients: [
-      { ingredient: "Thon en miettes", quantity: 160, unit: "grammes" },
-      { ingredient: "Maïs", quantity: 60, unit: "grammes" },
-      { ingredient: "Tomate", quantity: 1 },
-      { ingredient: "Concombre", quantity: 0.5 },
-      { ingredient: "Macaronis", quantity: 300, unit: "grammes" },
-      { ingredient: "Mayonnaise", quantity: 2, unit: "cuillères à soupe" },
+    ingrédients: [
+      { ingrédient: "Thon en miettes", quantity: 160, unit: "grammes" },
+      { ingrédient: "Maïs", quantity: 60, unit: "grammes" },
+      { ingrédient: "Tomate", quantity: 1 },
+      { ingrédient: "Concombre", quantity: 0.5 },
+      { ingrédient: "Macaronis", quantity: 300, unit: "grammes" },
+      { ingrédient: "Mayonnaise", quantity: 2, unit: "cuillères à soupe" },
     ],
     time: 40,
     description:
@@ -440,16 +440,16 @@ export const recipes = [
     id: 25,
     name: "Cookies",
     servings: 4,
-    ingredients: [
-      { ingredient: "Sucre", quantity: 100, unit: "grammes" },
-      { ingredient: "Beurre", quantity: 100, unit: "grammes" },
-      { ingredient: "Farine", quantity: 100, unit: "grammes" },
+    ingrédients: [
+      { ingrédient: "Sucre", quantity: 100, unit: "grammes" },
+      { ingrédient: "Beurre", quantity: 100, unit: "grammes" },
+      { ingrédient: "Farine", quantity: 100, unit: "grammes" },
       {
-        ingredient: "Chocolat noir en pépites",
+        ingrédient: "Chocolat noir en pépites",
         quantity: 100,
         unit: "grammes",
       },
-      { ingredient: "Oeuf", quantity: 1 },
+      { ingrédient: "Oeuf", quantity: 1 },
     ],
     time: 30,
     description:
@@ -461,12 +461,12 @@ export const recipes = [
     id: 26,
     name: "Soupe de tomates",
     servings: 2,
-    ingredients: [
-      { ingredient: "Tomate", quantity: 6 },
-      { ingredient: "Pommes de terre", quantity: 1 },
-      { ingredient: "Huile d'olives" },
-      { ingredient: "Oignon", quantity: 1 },
-      { ingredient: "Ail", quantity: 1, unit: "gousses" },
+    ingrédients: [
+      { ingrédient: "Tomate", quantity: 6 },
+      { ingrédient: "Pommes de terre", quantity: 1 },
+      { ingrédient: "Huile d'olives" },
+      { ingrédient: "Oignon", quantity: 1 },
+      { ingrédient: "Ail", quantity: 1, unit: "gousses" },
     ],
     time: 25,
     description:
@@ -478,12 +478,12 @@ export const recipes = [
     id: 27,
     name: "Soupe à l'oseille",
     servings: 4,
-    ingredients: [
-      { ingredient: "Oseille", quantity: 2 },
-      { ingredient: "Oeuf", quantity: 1 },
-      { ingredient: "Crème fraîche", quantity: 4, unit: "cuillère à soupe" },
-      { ingredient: "Vermicelles", quantity: 1, unit: "verres" },
-      { ingredient: "Beurre salé", quantity: 50, unit: "grammes" },
+    ingrédients: [
+      { ingrédient: "Oseille", quantity: 2 },
+      { ingrédient: "Oeuf", quantity: 1 },
+      { ingrédient: "Crème fraîche", quantity: 4, unit: "cuillère à soupe" },
+      { ingrédient: "Vermicelles", quantity: 1, unit: "verres" },
+      { ingrédient: "Beurre salé", quantity: 50, unit: "grammes" },
     ],
     time: 15,
     description:
@@ -495,12 +495,12 @@ export const recipes = [
     id: 28,
     name: "Soupe de poireaux",
     servings: 4,
-    ingredients: [
-      { ingredient: "Poireau", quantity: 3 },
-      { ingredient: "Pommes de terre", quantity: 400, unit: "grammes" },
-      { ingredient: "Oseille", quantity: 75, unit: "grammes" },
-      { ingredient: "Beurre", quantity: 50, unit: "grammes" },
-      { ingredient: "Crème fraîche", quantity: 10, unit: "cl" },
+    ingrédients: [
+      { ingrédient: "Poireau", quantity: 3 },
+      { ingrédient: "Pommes de terre", quantity: 400, unit: "grammes" },
+      { ingrédient: "Oseille", quantity: 75, unit: "grammes" },
+      { ingrédient: "Beurre", quantity: 50, unit: "grammes" },
+      { ingrédient: "Crème fraîche", quantity: 10, unit: "cl" },
     ],
     time: 80,
     description:
@@ -512,12 +512,12 @@ export const recipes = [
     id: 29,
     name: "Houmous Express",
     servings: 2,
-    ingredients: [
-      { ingredient: "Pois chiches", quantity: 1, unit: "boites" },
-      { ingredient: "Ail", quantity: 1, unit: "gousses" },
-      { ingredient: "Citron", quantity: 2 },
-      { ingredient: "Huile d'olive" },
-      { ingredient: "Paprika" },
+    ingrédients: [
+      { ingrédient: "Pois chiches", quantity: 1, unit: "boites" },
+      { ingrédient: "Ail", quantity: 1, unit: "gousses" },
+      { ingrédient: "Citron", quantity: 2 },
+      { ingrédient: "Huile d'olive" },
+      { ingrédient: "Paprika" },
     ],
     time: 30,
     description:
@@ -529,10 +529,10 @@ export const recipes = [
     id: 30,
     name: "Purée de pois cassés",
     servings: 4,
-    ingredients: [
-      { ingredient: "Pois Cassé", quantity: 500, unit: "grammes" },
-      { ingredient: "Oignon", quantity: 1 },
-      { ingredient: "Ail", quantity: 2, unit: "gousses" },
+    ingrédients: [
+      { ingrédient: "Pois Cassé", quantity: 500, unit: "grammes" },
+      { ingrédient: "Oignon", quantity: 1 },
+      { ingrédient: "Ail", quantity: 2, unit: "gousses" },
     ],
     time: 60,
     description:
@@ -544,12 +544,12 @@ export const recipes = [
     id: 31,
     name: "Jardinière de légumes",
     servings: 4,
-    ingredients: [
-      { ingredient: "Carotte", quantity: 2 },
-      { ingredient: "Pommes de terre", quantity: 2 },
-      { ingredient: "Haricots verts", quantity: 150, unit: "grammes" },
-      { ingredient: "Petits poids", quantity: 100, unit: "grammes" },
-      { ingredient: "Lardons", quantity: 150, unit: "grammes" },
+    ingrédients: [
+      { ingrédient: "Carotte", quantity: 2 },
+      { ingrédient: "Pommes de terre", quantity: 2 },
+      { ingrédient: "Haricots verts", quantity: 150, unit: "grammes" },
+      { ingrédient: "Petits poids", quantity: 100, unit: "grammes" },
+      { ingrédient: "Lardons", quantity: 150, unit: "grammes" },
     ],
     time: 60,
     description:
@@ -561,13 +561,13 @@ export const recipes = [
     id: 32,
     name: "Croque Monsieur à la dinde",
     servings: 4,
-    ingredients: [
-      { ingredient: "Pain de mie", quantity: 8, unit: "tranches" },
-      { ingredient: "Blanc de dinde", quantity: 4, unit: "tranches" },
-      { ingredient: "Emmental", quantity: 8, unit: "tranches" },
-      { ingredient: "Gruyère", quantity: 100, unit: "grammes" },
-      { ingredient: "Lait", quantity: 5, unit: "cl" },
-      { ingredient: "Noix de muscade", quantity: 1, unit: "pincées" },
+    ingrédients: [
+      { ingrédient: "Pain de mie", quantity: 8, unit: "tranches" },
+      { ingrédient: "Blanc de dinde", quantity: 4, unit: "tranches" },
+      { ingrédient: "Emmental", quantity: 8, unit: "tranches" },
+      { ingrédient: "Gruyère", quantity: 100, unit: "grammes" },
+      { ingrédient: "Lait", quantity: 5, unit: "cl" },
+      { ingrédient: "Noix de muscade", quantity: 1, unit: "pincées" },
     ],
     time: 20,
     description:
@@ -579,12 +579,12 @@ export const recipes = [
     id: 33,
     name: "Sandwich au saumon fumé",
     servings: 4,
-    ingredients: [
-      { ingredient: "Pain de mie", quantity: 8, unit: "tranches" },
-      { ingredient: "Saumon Fumé", quantity: 4, unit: "tranches" },
-      { ingredient: "Feuilles de laitue", quantity: 4 },
-      { ingredient: "Fromage blanc", quantity: 4, unit: "cuillères à soupe" },
-      { ingredient: "Jus de citron", quantity: 1, unit: "cuillères à soupe" },
+    ingrédients: [
+      { ingrédient: "Pain de mie", quantity: 8, unit: "tranches" },
+      { ingrédient: "Saumon Fumé", quantity: 4, unit: "tranches" },
+      { ingrédient: "Feuilles de laitue", quantity: 4 },
+      { ingrédient: "Fromage blanc", quantity: 4, unit: "cuillères à soupe" },
+      { ingrédient: "Jus de citron", quantity: 1, unit: "cuillères à soupe" },
     ],
     time: 5,
     description:
@@ -596,11 +596,11 @@ export const recipes = [
     id: 34,
     name: "Purée de patate douce",
     servings: 4,
-    ingredients: [
-      { ingredient: "Patate douce", quantity: 800, unit: "grammes" },
-      { ingredient: "Crème fraîche", quantity: 20, unit: "cl" },
-      { ingredient: "Huile d'olive" },
-      { ingredient: "Orange", quantity: 1 },
+    ingrédients: [
+      { ingrédient: "Patate douce", quantity: 800, unit: "grammes" },
+      { ingrédient: "Crème fraîche", quantity: 20, unit: "cl" },
+      { ingrédient: "Huile d'olive" },
+      { ingrédient: "Orange", quantity: 1 },
     ],
     time: 25,
     description:
@@ -612,13 +612,13 @@ export const recipes = [
     id: 35,
     name: "Purée de carottes",
     servings: 2,
-    ingredients: [
-      { ingredient: "Carotte", quantity: 6 },
-      { ingredient: "Pommes de terre", quantity: 1 },
-      { ingredient: "Beurre", quantity: 20, unit: "grammes" },
-      { ingredient: "Crème fraîche", quantity: 2, unit: "cuillères à soupe" },
-      { ingredient: "Cumin", quantity: 1, unit: "cuillères à café" },
-      { ingredient: "Noix de muscade", quantity: 1, unit: "pincées" },
+    ingrédients: [
+      { ingrédient: "Carotte", quantity: 6 },
+      { ingrédient: "Pommes de terre", quantity: 1 },
+      { ingrédient: "Beurre", quantity: 20, unit: "grammes" },
+      { ingrédient: "Crème fraîche", quantity: 2, unit: "cuillères à soupe" },
+      { ingrédient: "Cumin", quantity: 1, unit: "cuillères à café" },
+      { ingrédient: "Noix de muscade", quantity: 1, unit: "pincées" },
     ],
     time: 25,
     description:
@@ -630,13 +630,13 @@ export const recipes = [
     id: 36,
     name: "Lasagne Courgettes et Chèvre",
     servings: 2,
-    ingredients: [
-      { ingredient: "Courgette", quantity: 2 },
-      { ingredient: "Fromage de chèvre", quantity: 4 },
-      { ingredient: "Lait", quantity: 25, unit: "cl" },
-      { ingredient: "Lasagnes", quantity: 5, unit: "feuilles" },
-      { ingredient: "Gruyère", quantity: 40, unit: "grammes" },
-      { ingredient: "Maïzena", quantity: 1, unit: "cuillères à soupe" },
+    ingrédients: [
+      { ingrédient: "Courgette", quantity: 2 },
+      { ingrédient: "Fromage de chèvre", quantity: 4 },
+      { ingrédient: "Lait", quantity: 25, unit: "cl" },
+      { ingrédient: "Lasagnes", quantity: 5, unit: "feuilles" },
+      { ingrédient: "Gruyère", quantity: 40, unit: "grammes" },
+      { ingrédient: "Maïzena", quantity: 1, unit: "cuillères à soupe" },
     ],
     time: 35,
     description:
@@ -648,13 +648,13 @@ export const recipes = [
     id: 37,
     name: "Courgettes farcies au boeuf",
     servings: 2,
-    ingredients: [
-      { ingredient: "Courgette", quantity: 2 },
-      { ingredient: "Viande hachée", quantity: 600, unit: "grammes" },
-      { ingredient: "Huile d'olives", quantity: 25, unit: "cl" },
-      { ingredient: "Oignon", quantity: 1 },
-      { ingredient: "Coulis de tomates", quantity: 20, unit: "cl" },
-      { ingredient: "Gruyère", quantity: 50, unit: "grammes" },
+    ingrédients: [
+      { ingrédient: "Courgette", quantity: 2 },
+      { ingrédient: "Viande hachée", quantity: 600, unit: "grammes" },
+      { ingrédient: "Huile d'olives", quantity: 25, unit: "cl" },
+      { ingrédient: "Oignon", quantity: 1 },
+      { ingrédient: "Coulis de tomates", quantity: 20, unit: "cl" },
+      { ingrédient: "Gruyère", quantity: 50, unit: "grammes" },
     ],
     time: 60,
     description:
@@ -666,11 +666,11 @@ export const recipes = [
     id: 38,
     name: "Pain Perdu",
     servings: 4,
-    ingredients: [
-      { ingredient: "Pain", quantity: 6, unit: "tranches" },
-      { ingredient: "Lait", quantity: 25, unit: "cl" },
-      { ingredient: "Oeuf", quantity: 3 },
-      { ingredient: "Sucre roux", quantity: 75, unit: "grammes" },
+    ingrédients: [
+      { ingrédient: "Pain", quantity: 6, unit: "tranches" },
+      { ingrédient: "Lait", quantity: 25, unit: "cl" },
+      { ingrédient: "Oeuf", quantity: 3 },
+      { ingrédient: "Sucre roux", quantity: 75, unit: "grammes" },
     ],
     time: 20,
     description:
@@ -682,11 +682,11 @@ export const recipes = [
     id: 39,
     name: "Crumble aux pommes",
     servings: 40,
-    ingredients: [
-      { ingredient: "Pomme", quantity: 2 },
-      { ingredient: "Farine", quantity: 100, unit: "grammes" },
-      { ingredient: "Beurre", quantity: 50, unit: "grammes" },
-      { ingredient: "Sucre roux", quantity: 80, unit: "grammes" },
+    ingrédients: [
+      { ingrédient: "Pomme", quantity: 2 },
+      { ingrédient: "Farine", quantity: 100, unit: "grammes" },
+      { ingrédient: "Beurre", quantity: 50, unit: "grammes" },
+      { ingrédient: "Sucre roux", quantity: 80, unit: "grammes" },
     ],
     time: 40,
     description:
@@ -698,11 +698,11 @@ export const recipes = [
     id: 40,
     name: "Limonade",
     servings: 4,
-    ingredients: [
-      { ingredient: "Eau", quantity: 1, unit: "Litres" },
-      { ingredient: "Citron Vert", quantity: 3 },
-      { ingredient: "Sucre en poudre", quantity: 4, unit: "cuillères à café" },
-      { ingredient: "Bicarbonate", quantity: 1, unit: "cuillères à café" },
+    ingrédients: [
+      { ingrédient: "Eau", quantity: 1, unit: "Litres" },
+      { ingrédient: "Citron Vert", quantity: 3 },
+      { ingrédient: "Sucre en poudre", quantity: 4, unit: "cuillères à café" },
+      { ingrédient: "Bicarbonate", quantity: 1, unit: "cuillères à café" },
     ],
     time: 10,
     description:
@@ -714,10 +714,10 @@ export const recipes = [
     id: 41,
     name: "Mousse au chocolat",
     servings: 4,
-    ingredients: [
-      { ingredient: "Oeuf", quantity: 3 },
-      { ingredient: "Chocolat noir", quantity: 100, unit: "grammes" },
-      { ingredient: "Sucre vanillé", quantity: 1, unit: "sachets" },
+    ingrédients: [
+      { ingrédient: "Oeuf", quantity: 3 },
+      { ingrédient: "Chocolat noir", quantity: 100, unit: "grammes" },
+      { ingrédient: "Sucre vanillé", quantity: 1, unit: "sachets" },
     ],
     time: 20,
     description:
@@ -729,12 +729,12 @@ export const recipes = [
     id: 42,
     name: "Charlotte au poires",
     servings: 3,
-    ingredients: [
-      { ingredient: "Chocolat", quantity: 200, unit: "grammes" },
-      { ingredient: "Oeuf", quantity: 3 },
-      { ingredient: "Poires au jus", quantity: 0.5, unit: "boites" },
+    ingrédients: [
+      { ingrédient: "Chocolat", quantity: 200, unit: "grammes" },
+      { ingrédient: "Oeuf", quantity: 3 },
+      { ingrédient: "Poires au jus", quantity: 0.5, unit: "boites" },
       {
-        ingredient: "Boudoirs",
+        ingrédient: "Boudoirs",
         quantity: 15,
       },
     ],
@@ -748,12 +748,12 @@ export const recipes = [
     id: 43,
     name: "Tarte au citron",
     servings: 6,
-    ingredients: [
-      { ingredient: "Pâte brisée", quantity: 200, unit: "grammes" },
-      { ingredient: "Sucre", quantity: 150, unit: "grammes" },
-      { ingredient: "Beurre fondu", quantity: 100, unit: "grammes" },
-      { ingredient: "Oeuf", quantity: 3 },
-      { ingredient: "Citron" },
+    ingrédients: [
+      { ingrédient: "Pâte brisée", quantity: 200, unit: "grammes" },
+      { ingrédient: "Sucre", quantity: 150, unit: "grammes" },
+      { ingrédient: "Beurre fondu", quantity: 100, unit: "grammes" },
+      { ingrédient: "Oeuf", quantity: 3 },
+      { ingrédient: "Citron" },
     ],
     time: 50,
     description:
@@ -765,12 +765,12 @@ export const recipes = [
     id: 44,
     name: "Crème dessert au chocolat",
     servings: 6,
-    ingredients: [
-      { ingredient: "Lait", quantity: 1, unit: "litres" },
-      { ingredient: "Chocolat", quantity: 200, unit: "grammes" },
-      { ingredient: "Sucre", quantity: 100, unit: "grammes" },
-      { ingredient: "Beurre", quantity: 50, unit: "grammes" },
-      { ingredient: "farine", quantity: 40, unit: "grammes" },
+    ingrédients: [
+      { ingrédient: "Lait", quantity: 1, unit: "litres" },
+      { ingrédient: "Chocolat", quantity: 200, unit: "grammes" },
+      { ingrédient: "Sucre", quantity: 100, unit: "grammes" },
+      { ingrédient: "Beurre", quantity: 50, unit: "grammes" },
+      { ingrédient: "farine", quantity: 40, unit: "grammes" },
     ],
     time: 15,
     description:
@@ -782,11 +782,11 @@ export const recipes = [
     id: 45,
     name: "Crème pâtissière",
     servings: 8,
-    ingredients: [
-      { ingredient: "Lait", quantity: 50, unit: "cl" },
-      { ingredient: "Oeuf", quantity: 2 },
-      { ingredient: "Farine", quantity: 30, unit: "grammes" },
-      { ingredient: "Sucre", quantity: 80, unit: "grammes" },
+    ingrédients: [
+      { ingrédient: "Lait", quantity: 50, unit: "cl" },
+      { ingrédient: "Oeuf", quantity: 2 },
+      { ingrédient: "Farine", quantity: 30, unit: "grammes" },
+      { ingrédient: "Sucre", quantity: 80, unit: "grammes" },
     ],
     time: 30,
     description:
@@ -798,13 +798,13 @@ export const recipes = [
     id: 46,
     name: "Far breton",
     servings: 6,
-    ingredients: [
-      { ingredient: "Farine", quantity: 250, unit: "grammes" },
-      { ingredient: "Sucre", quantity: 150, unit: "grammes" },
-      { ingredient: "Sucre vanillé", quantity: 1, unit: "sachets" },
-      { ingredient: "Oeuf", quantity: 4 },
-      { ingredient: "Lait", quantity: 1, unit: "litre" },
-      { ingredient: "Pruneaux", quantity: 100, unit: "grammes" },
+    ingrédients: [
+      { ingrédient: "Farine", quantity: 250, unit: "grammes" },
+      { ingrédient: "Sucre", quantity: 150, unit: "grammes" },
+      { ingrédient: "Sucre vanillé", quantity: 1, unit: "sachets" },
+      { ingrédient: "Oeuf", quantity: 4 },
+      { ingrédient: "Lait", quantity: 1, unit: "litre" },
+      { ingrédient: "Pruneaux", quantity: 100, unit: "grammes" },
     ],
     time: 60,
     description:
@@ -816,11 +816,11 @@ export const recipes = [
     id: 47,
     name: "Mousse au citron",
     servings: 6,
-    ingredients: [
-      { ingredient: "Jus de citron", quantity: 100, unit: "grammes" },
-      { ingredient: "Mascarpone", quantity: 250, unit: "grammes" },
-      { ingredient: "Sucre", quantity: 100, unit: "grammes" },
-      { ingredient: "Crème Fraîche", quantity: 20, unit: "cl" },
+    ingrédients: [
+      { ingrédient: "Jus de citron", quantity: 100, unit: "grammes" },
+      { ingrédient: "Mascarpone", quantity: 250, unit: "grammes" },
+      { ingrédient: "Sucre", quantity: 100, unit: "grammes" },
+      { ingrédient: "Crème Fraîche", quantity: 20, unit: "cl" },
     ],
     time: 5,
     description:
@@ -832,12 +832,12 @@ export const recipes = [
     id: 48,
     name: "Pizza",
     servings: 4,
-    ingredients: [
-      { ingredient: "Pâte à pizza", quantity: 1 },
-      { ingredient: "Tomates pelées", quantity: 1, unit: "boites" },
-      { ingredient: "Lardons", quantity: 1, unit: "barquettes" },
-      { ingredient: "Champignons de paris", quantity: 1, unit: "boites" },
-      { ingredient: "Gruyère", quantity: 200, unit: "grammes" },
+    ingrédients: [
+      { ingrédient: "Pâte à pizza", quantity: 1 },
+      { ingrédient: "Tomates pelées", quantity: 1, unit: "boites" },
+      { ingrédient: "Lardons", quantity: 1, unit: "barquettes" },
+      { ingrédient: "Champignons de paris", quantity: 1, unit: "boites" },
+      { ingrédient: "Gruyère", quantity: 200, unit: "grammes" },
     ],
     time: 40,
     description:
@@ -849,12 +849,12 @@ export const recipes = [
     id: 49,
     name: "Smoothie tropical",
     servings: 4,
-    ingredients: [
-      { ingredient: "Bananes", quantity: 2 },
-      { ingredient: "Kiwis", quantity: 3 },
-      { ingredient: "Mangue", quantity: 1 },
-      { ingredient: "Ananas", quantity: 4, unit: "tranches" },
-      { ingredient: "Miel", quantity: 2, unit: "cuillères à soupe" },
+    ingrédients: [
+      { ingrédient: "Bananes", quantity: 2 },
+      { ingrédient: "Kiwis", quantity: 3 },
+      { ingrédient: "Mangue", quantity: 1 },
+      { ingrédient: "Ananas", quantity: 4, unit: "tranches" },
+      { ingrédient: "Miel", quantity: 2, unit: "cuillères à soupe" },
     ],
     time: 0,
     description:
@@ -866,12 +866,12 @@ export const recipes = [
     id: 50,
     name: "Frangipane",
     servings: 2,
-    ingredients: [
-      { ingredient: "Pâte feuilletée", quantity: 400, unit: "grammes" },
-      { ingredient: "Oeuf", quantity: 6 },
-      { ingredient: "Poudre d'amendes", quantity: 500, unit: "grammes" },
-      { ingredient: "Beurre", quantity: 500, unit: "grammes" },
-      { ingredient: "Sucre glace", quantity: 500, unit: "grammes" },
+    ingrédients: [
+      { ingrédient: "Pâte feuilletée", quantity: 400, unit: "grammes" },
+      { ingrédient: "Oeuf", quantity: 6 },
+      { ingrédient: "Poudre d'amendes", quantity: 500, unit: "grammes" },
+      { ingrédient: "Beurre", quantity: 500, unit: "grammes" },
+      { ingrédient: "Sucre glace", quantity: 500, unit: "grammes" },
     ],
     time: 60,
     description:
