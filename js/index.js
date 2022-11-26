@@ -73,43 +73,43 @@ eventListenerList.forEach((element) => {
 
 displayRecipes(recipes);
 
-function handleSearch() {
-  const start = performance.now();
-  if (document.querySelector("#search-recipe").value.length < 3) {
-    displayRecipes(recipes);
-    if (activeFilterList.length != 0) {
-      displayFilteredRecipes();
-    }
-    return;
-  }
-  const searchContent = document
-    .querySelector("#search-recipe")
-    .value.split(" ");
-  let searchRecipesArray = [];
-  for (const recipe in currentlyDisplayedRecipes) {
-    for (const word in searchContent) {
-      if (
-        currentlyDisplayedRecipes[recipe].ingrédients.includes(
-          searchContent[word]
-        ) ||
-        currentlyDisplayedRecipes[recipe].description.includes(
-          searchContent[word]
-        ) ||
-        currentlyDisplayedRecipes[recipe].name.includes(searchContent[word])
-      ) {
-        if (word == searchContent.length - 1) {
-          searchRecipesArray.push(currentlyDisplayedRecipes[recipe]);
-        }
-      } else {
-        break;
-      }
-    }
-  }
-  displayRecipes(searchRecipesArray);
-  console.log(`Execution time: ${performance.now() - start} ms`);
-}
+// function handleSearch() {
+//   const start = performance.now();
+//   if (document.querySelector("#search-recipe").value.length < 3) {
+//     displayRecipes(recipes);
+//     if (activeFilterList.length != 0) {
+//       displayFilteredRecipes();
+//     }
+//     return;
+//   }
+//   const searchContent = document
+//     .querySelector("#search-recipe")
+//     .value.split(" ");
+//   let searchRecipesArray = [];
+//   for (const recipe in currentlyDisplayedRecipes) {
+//     for (const word in searchContent) {
+//       if (
+//         currentlyDisplayedRecipes[recipe].ingrédients.includes(
+//           searchContent[word]
+//         ) ||
+//         currentlyDisplayedRecipes[recipe].description.includes(
+//           searchContent[word]
+//         ) ||
+//         currentlyDisplayedRecipes[recipe].name.includes(searchContent[word])
+//       ) {
+//         if (word == searchContent.length - 1) {
+//           searchRecipesArray.push(currentlyDisplayedRecipes[recipe]);
+//         }
+//       } else {
+//         break;
+//       }
+//     }
+//   }
+//   displayRecipes(searchRecipesArray);
+//   console.log(`Execution time: ${performance.now() - start} ms`);
+// }
 
-window.handleSearch = handleSearch;
+// window.handleSearch = handleSearch;
 
 function displayActiveFilter(filterText, category) {
   const activeFilter = document.createElement("span");
