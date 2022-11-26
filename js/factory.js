@@ -8,7 +8,6 @@ export function generateRecipeMap(recipe) {
   const recipeTime = document.createElement("h2");
   const recipeIngredients = document.createElement("span");
   const recipeDescription = document.createElement("span");
-
   recipeName.textContent = recipe.name;
   recipeTime.innerHTML = `<i class="fa-regular fa-clock"></i>${[
     "",
@@ -17,7 +16,6 @@ export function generateRecipeMap(recipe) {
   ].join(" ")}`;
   generateIngrédients(recipe.ingrédients, recipeIngredients);
   recipeDescription.textContent = recipe.description;
-
   recipeMap.appendChild(recipeMapImage);
   recipeMap.appendChild(recipeMapDetails);
   recipeTitle.appendChild(recipeName);
@@ -26,7 +24,6 @@ export function generateRecipeMap(recipe) {
   recipeMaking.appendChild(recipeIngredients);
   recipeMaking.appendChild(recipeDescription);
   recipeMapDetails.appendChild(recipeMaking);
-
   recipeMap.classList.add("recipe-map");
   recipeMapImage.classList.add("recipe-map-picture");
   recipeMapDetails.classList.add("recipe-map-details");
@@ -35,7 +32,6 @@ export function generateRecipeMap(recipe) {
   recipeMaking.classList.add("recipe-process");
   recipeIngredients.classList.add("recipe-ingrédients");
   recipeDescription.classList.add("recipe-description");
-
   return recipeMap;
 }
 

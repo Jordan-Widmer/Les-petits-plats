@@ -94,8 +94,14 @@ nav {
   border-radius: 7px;
   margin: 0;
   overflow: hidden;
-  width: 393px;
   height: 380px;
+  max-width: 410px;
+  min-width: 30%;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.recipe-map:hover {
+  box-shadow: 0 0px 8px 0 rgb(0 0 0 / 20%);
 }
 .recipe-map-picture {
   background-color: #c7bebe;
@@ -140,11 +146,14 @@ nav {
   font-family: "Roboto";
 }
 .recipe-description {
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
   overflow: hidden;
   font-size: 13px;
   font-weight: bold;
   line-height: 16px;
-  max-height: 100px;
+  max-height: 98px;
   font-family: "Roboto";
 }
 .ingrédient-filter-item {
@@ -194,4 +203,32 @@ nav {
   margin: 0;
   padding: 0;
   width: fit-content;
+}
+#recipe-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 23px;
+}
+.dropdown-ingrédients {
+  background-color: #3282f7;
+}
+.dropdown-ustensiles {
+  background-color: #ed6454;
+}
+.dropdown-appareils {
+  background-color: #68d9a4;
+}
+.dropdown-ingrédients,
+.dropdown-ustensiles,
+.dropdown-appareils {
+  display: none;
+  position: absolute;
+  width: 667px;
+  max-height: 328px;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  flex-wrap: wrap;
+  color: white;
+  border-radius: 0 0 5px 5px;
 }

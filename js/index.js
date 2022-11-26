@@ -114,7 +114,7 @@ window.handleSearch = handleSearch;
 function displayActiveFilter(filterText, category) {
   const activeFilter = document.createElement("span");
   const deleteIcon = document.createElement("i");
-  deleteIcon.classList.add("fa", "fa-times-circle-o", "fa-2xl");
+  deleteIcon.classList.add("fa-regular", "fa-circle-xmark");
   activeFilter.textContent = filterText;
   activeFilter.appendChild(deleteIcon);
 
@@ -194,6 +194,13 @@ function populateFiltersAndMap(ingrédients, recipe) {
         ? mappedList.ingrédients[ingrédient.ingrédient].push(recipe)
         : (mappedList.ingrédients[ingrédient.ingrédient] = [recipe]);
     });
+  } else {
+    filtersList.ingrédients.includes(ingrédients)
+      ? null
+      : filtersList.ingrédients.push(ingrédients);
+    mappedList.ingrédients[ingrédient.ingrédient]
+      ? mappedList.ingrédients[ingrédient.ingrédient].push(recipe)
+      : (mappedList.ingrédients[ingrédient.ingrédient] = [recipe]);
   }
 }
 
@@ -226,3 +233,7 @@ function handleFilterBtn(category) {
   });
 }
 window.handleFilterBtn = handleFilterBtn;
+
+function normalizeFilter(string) {
+  return string[0].toUpperCase() + string.substring(1).toLowerCase();
+}
