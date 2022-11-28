@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Les petits plats</title>
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<link rel="stylesheet" href="style.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+			integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+	</head>
+
+	<body>
+		<img src="./assets/logo.png" alt="Les petits Plats Homepage" class="logo-title" />
+		<span class="search-bar-container">
+			<input
+				id="search-recipe"
+				placeholder="Rechercher un ingrédient, appareil, ustensiles ou une recette"
+				oninput="handleSearch()"
+			/>
+			<i class="fa fa-search"></i>
+		</span>
+		<nav>
+			<div class="dropdown" onclick="handleFilterBtn('ingrédients')">
+				<button id="ingrédients-btn" class="btn-filter">
+					<input
+						class="ingrédients-input"
+						oninput="handleFilterBtn('ingrédients')"
+						placeholder="Ingrédients"
+					/>
+					<i class="fa fa-chevron-down"></i>
+				</button>
+				<div class="dropdown-ingrédients"></div>
+			</div>
+			<div class="dropdown" onclick="handleFilterBtn('appareils')">
+				<button id="appareils-btn" class="btn-filter">
+					<input
+						placeholder="Appareils"
+						class="appareils-input"
+						oninput="handleFilterBtn('appareils')"
+					/>
+					<i class="fa fa-chevron-down"></i>
+				</button>
+				<div class="dropdown-appareils"></div>
+			</div>
+			<div class="dropdown" onclick="handleFilterBtn('ustensiles')">
+				<button id="ustensiles-btn" class="btn-filter">
+					<input
+						placeholder="Ustensiles"
+						class="ustensiles-input"
+						oninput="handleFilterBtn('ustensiles')"
+					/>
+					<i class="fa fa-chevron-down"></i>
+				</button>
+				<div class="dropdown-ustensiles"></div>
+			</div>
+		</nav>
+
+		<main id="recipe-list"></main>
+	</body>
+	<script type="module" src="./js/index.js"></script>
+</html>
