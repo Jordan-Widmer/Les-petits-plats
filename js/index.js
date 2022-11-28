@@ -1,6 +1,5 @@
 import * as data from "./data/recipes.js";
 import * as factory from "./factory.js";
-
 const recipes = data.recipes;
 let filtersList = {
   ingrédients: [],
@@ -15,7 +14,6 @@ let mappedList = {
 let activeFilterList = [];
 let activeFilterListState = [];
 let currentlyDisplayedRecipes = recipes;
-
 const recipeSection = document.querySelector("#recipe-list");
 
 function displayRecipes(recipeList) {
@@ -41,13 +39,11 @@ function displayRecipes(recipeList) {
   });
   regenerateFilters();
 }
-
 const eventListenerList = [
   [document.querySelector(".ingrédients-input"), "ingrédients"],
   [document.querySelector(".appareils-input"), "appareils"],
   [document.querySelector(".ustensiles-input"), "ustensiles"],
 ];
-
 eventListenerList.forEach((element) => {
   element[0].addEventListener("focus", (event) => {
     event.target.placeholder = ["Rechercher un", element[1]].join(" ");
@@ -70,7 +66,6 @@ eventListenerList.forEach((element) => {
     }
   });
 });
-
 displayRecipes(recipes);
 
 function handleSearch() {
@@ -108,7 +103,6 @@ function handleSearch() {
   displayRecipes(searchRecipesArray);
   console.log(`Execution time: ${performance.now() - start} ms`);
 }
-
 window.handleSearch = handleSearch;
 
 function displayActiveFilter(filterText, category) {
@@ -117,16 +111,15 @@ function displayActiveFilter(filterText, category) {
   deleteIcon.classList.add("fa-regular", "fa-circle-xmark");
   activeFilter.textContent = filterText;
   activeFilter.appendChild(deleteIcon);
-
   switch (category) {
     case "ingrédients":
-      activeFilter.classList.add("ingrédient-filter-item");
+      activeFilter.classList.add("ingrédient-filter");
       break;
     case "ustensiles":
-      activeFilter.classList.add("ustensil-filter-item");
+      activeFilter.classList.add("ustensil-filter");
       break;
     case "appareils":
-      activeFilter.classList.add("appareil-filter-item");
+      activeFilter.classList.add("appareil-filter");
       break;
   }
   activeFilter.addEventListener("click", () => {
@@ -135,7 +128,7 @@ function displayActiveFilter(filterText, category) {
       Array.from(activeFilter.parentElement.children).indexOf(activeFilter)
     );
   });
-  document.querySelector(".active-filter-list").appendChild(activeFilter);
+  document.querySelector(".active-filter").appendChild(activeFilter);
 }
 
 function removeActiveFilter(filter, index) {
@@ -149,7 +142,6 @@ function removeActiveFilter(filter, index) {
     handleSearch();
     return;
   }
-
   if (activeFilterList.length == 0) {
     displayRecipes(recipes);
     return;
@@ -183,7 +175,7 @@ function displayFilteredRecipes() {
   displayRecipes(filteredData);
 }
 
-function populateFiltersAndMap(ingrédients, recipe) {
+function populateFiltersAndMap(ingrédients, ustensiles, appareils, recipe) {
   if (Array.isArray(ingrédients)) {
     ingrédients.forEach((ingrédient) => {
       ingrédient.ingrédient = normalizeFilter(ingrédient.ingrédient);
@@ -201,6 +193,42 @@ function populateFiltersAndMap(ingrédients, recipe) {
     mappedList.ingrédients[ingrédient.ingrédient]
       ? mappedList.ingrédients[ingrédient.ingrédient].push(recipe)
       : (mappedList.ingrédients[ingrédient.ingrédient] = [recipe]);
+  }
+  if (Array.isArray(ustensiles)) {
+    ustensiles.forEach((ustensile) => {
+      ustensile = normalizeFilter(ustensile);
+      filtersList.ustensiles.includes(ustensile)
+        ? null
+        : filtersList.ustensiles.push(ustensile);
+      mappedList.ustensiles[ustensile]
+        ? mappedList.ustensiles[ustensile].push(recipe)
+        : (mappedList.ustensiles[ustensile] = [recipe]);
+    });
+  } else {
+    filtersList.ustensiles.includes(ustensiles)
+      ? null
+      : filtersList.ustensiles.push(ustensiles);
+    mappedList.ustensiles[ustensile]
+      ? mappedList.ustensiles[ustensile].push(recipe)
+      : (mappedList.ustensiles[ustensile] = [recipe]);
+  }
+  if (Array.isArray(appareils)) {
+    appareils.forEach((appareil) => {
+      appareil = normalizeFilter(appareil);
+      filtersList.appareils.includes(appareil)
+        ? null
+        : filtersList.appareils.push(appareil);
+      mappedList.appareils[appareils]
+        ? mappedList.appareils[appareils].push(recipe)
+        : (mappedList.appareils[appareils] = [recipe]);
+    });
+  } else {
+    filtersList.appareils.includes(appareils)
+      ? null
+      : filtersList.appareils.push(appareils);
+    mappedList.appareils[appareils]
+      ? mappedList.appareils[appareils].push(recipe)
+      : (mappedList.appareils[appareils] = [recipe]);
   }
 }
 
