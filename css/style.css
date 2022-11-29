@@ -156,7 +156,7 @@ nav {
   max-height: 98px;
   font-family: "Roboto";
 }
-.ingrédient-filter-item {
+.ingrédient-filter {
   background-color: #3282f7;
   color: white;
   border-radius: 5px;
@@ -168,7 +168,7 @@ nav {
   height: 37px;
   font-size: 14px;
 }
-.appareil-filter-item {
+.appareil-filter {
   color: white;
   background-color: #68d9a4;
   border-radius: 5px;
@@ -180,7 +180,7 @@ nav {
   height: 37px;
   font-size: 14px;
 }
-.ustensil-filter-item {
+.ustensil-filter {
   background-color: #ed6454;
   color: white;
   border-radius: 5px;
@@ -231,4 +231,9 @@ nav {
   flex-wrap: wrap;
   color: white;
   border-radius: 0 0 5px 5px;
+}
+.active-filter {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
 }
