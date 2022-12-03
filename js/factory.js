@@ -1,4 +1,7 @@
+// c'est une fonction d'usine qui est utilisée pour créer des objets
+// dans notre cas, cette fonction créera une recette et la retournera
 export function generateRecipeMap(recipe) {
+  // ce sont des méthodes javascript pour créer des éléments DOM
   const recipeMap = document.createElement("figure");
   const recipeMapImage = document.createElement("images");
   const recipeMapDetails = document.createElement("figcaption");
@@ -8,6 +11,7 @@ export function generateRecipeMap(recipe) {
   const recipeTime = document.createElement("h2");
   const recipeIngredients = document.createElement("span");
   const recipeDescription = document.createElement("span");
+  // Ceci est utilisé pour écrire du contenu dans l'élément que nous avons créé.
   recipeName.textContent = recipe.name;
   recipeTime.innerHTML = `<i class="fa-regular fa-clock"></i>${[
     "",
@@ -34,7 +38,7 @@ export function generateRecipeMap(recipe) {
   recipeDescription.classList.add("recipe-description");
   return recipeMap;
 }
-
+// cette fonction créera des éléments DOM pour les ingrédients
 function generateIngrédients(ingrédients, ingrédientsElement) {
   ingrédients.forEach((ingrédient) => {
     const ingrédientsDetails = document.createElement("span");

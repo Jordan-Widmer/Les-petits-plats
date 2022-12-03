@@ -1,6 +1,9 @@
+// importe le fichier recipes.js
 import * as data from "./data/recipes.js";
+// importe le fichier factory.js
 import * as factory from "./factory.js";
 const recipes = data.recipes;
+// cet objet contiendra les données des filtres
 let filtersList = {
   ingrédients: [],
   ustensiles: [],
@@ -14,8 +17,9 @@ let mappedList = {
 let activeFilterList = [];
 let activeFilterListState = [];
 let currentlyDisplayedRecipes = recipes;
+// getting recipeSection from the DOM
 const recipeSection = document.querySelector("#recipe-list");
-
+// cette fonction affichera les recettes
 function displayRecipes(recipeList) {
   recipeSection.replaceChildren();
   filtersList = {
@@ -28,6 +32,7 @@ function displayRecipes(recipeList) {
     ustensiles: [],
     appareils: [],
   };
+  // répétition sur le tableau de recettes et appel generateRecipeMap
   recipeList.forEach((recipe) => {
     recipeSection.appendChild(factory.generateRecipeMap(recipe));
     populateFiltersAndMap(
@@ -39,11 +44,13 @@ function displayRecipes(recipeList) {
   });
   regenerateFilters();
 }
+// obtention le champ d'entrée du DOM et attachement du listener
 const eventListenerList = [
   [document.querySelector(".ingrédients-input"), "ingrédients"],
   [document.querySelector(".appareils-input"), "appareils"],
   [document.querySelector(".ustensiles-input"), "ustensiles"],
 ];
+// attachement du listener
 eventListenerList.forEach((element) => {
   element[0].addEventListener("focus", (event) => {
     event.target.placeholder = ["Rechercher un", element[1]].join(" ");
@@ -67,10 +74,11 @@ eventListenerList.forEach((element) => {
   });
 });
 displayRecipes(recipes);
-
+// handle search function est appelé lorsque nous utiliserons le filtre dans l'application
 function handleSearch() {
+  // cette fonction calculera l'heure de début de l'algorithme
   const start = performance.now();
-  console.log(start);
+  // si la valeur du champ de recherche est inférieure à 3 caractères, il affichera toutes les recettes
   if (document.querySelector("#search-recipe").value.length < 3) {
     displayRecipes(recipes);
     if (activeFilterList.length != 0) {
@@ -78,17 +86,19 @@ function handleSearch() {
     }
     return;
   }
+  // nous obtenons des valeurs pour la valeur de recherche
   const searchContent = document
     .querySelector("#search-recipe")
     .value.split(" ");
+  // searchRecipesArray contiendra les recettes filtrées
   let searchRecipesArray = [];
+  // répétition sur currentDisplayedRecipes
   currentlyDisplayedRecipes.forEach((recipe) => {
+    // vérifie si recipe.name inclut la chaîne de recherche puis renvoie la recette
     if (recipe.name.toLowerCase().includes(searchContent[0].toLowerCase())) {
-      console.log(recipe);
-      console.log("name matching...");
       searchRecipesArray.push(recipe);
     }
-    // console.log(recipe.ingrédients.some((ingredient) => ingredient.ingrédient.toLowerCase().includes(searchContent[0].toLowerCase())))
+    // vérifie si recette.ingrédient inclut la chaîne de recherche puis renvoie la recette
     else if (
       recipe.ingrédients.some((ingredient) =>
         ingredient.ingrédient
@@ -96,22 +106,23 @@ function handleSearch() {
           .includes(searchContent[0].toLowerCase())
       )
     ) {
-      console.log(recipe);
-      console.log(" ingredient matchin...");
       searchRecipesArray.push(recipe);
     }
   });
+  // nous affichons le searchRecipesArray dans le DOM
   displayRecipes(searchRecipesArray);
   console.log(`Execution time: ${performance.now() - start} ms`);
 }
 window.handleSearch = handleSearch;
-
+// cette fonction affichera les filtres actifs sur le DOM
 function displayActiveFilter(filterText, category) {
   const activeFilter = document.createElement("span");
   const deleteIcon = document.createElement("i");
   deleteIcon.classList.add("fa-regular", "fa-circle-xmark");
   activeFilter.textContent = filterText;
+  // ajout de la nouvelle balise I créée dans le dom
   activeFilter.appendChild(deleteIcon);
+  // ajout de classes dynamiques basées sur la catégorie de filtre
   switch (category) {
     case "ingrédients":
       activeFilter.classList.add("ingrédient-filter");
@@ -123,6 +134,7 @@ function displayActiveFilter(filterText, category) {
       activeFilter.classList.add("appareil-filter");
       break;
   }
+  // attache l'événement click au filtre actif.
   activeFilter.addEventListener("click", () => {
     removeActiveFilter(
       activeFilter,
@@ -131,7 +143,7 @@ function displayActiveFilter(filterText, category) {
   });
   document.querySelector(".active-filter").appendChild(activeFilter);
 }
-
+// suppression du filtre actif..
 function removeActiveFilter(filter, index) {
   filter.remove();
   activeFilterList.splice(index, 1);
@@ -149,13 +161,13 @@ function removeActiveFilter(filter, index) {
   }
   displayFilteredRecipes();
 }
-
+// cette fonction ajoutera un filtre dans le tableau des filtres
 function addFiltersRecipes(filterName, filterType) {
   activeFilterList.push(mappedList[filterType][filterName]);
   activeFilterListState.push([filterType, filterName]);
   displayFilteredRecipes();
 }
-
+// régénère les filtres à partir de la liste
 function regenerateFilters() {
   const tempActiveFilterList = [];
   activeFilterListState.forEach((filter) => {
@@ -163,7 +175,7 @@ function regenerateFilters() {
   });
   activeFilterList = tempActiveFilterList;
 }
-
+// cette fonction affichera les recettes filtrées sur le dom.
 function displayFilteredRecipes() {
   const flattedList = activeFilterList.flat(1);
   const filteredData = flattedList.filter(
@@ -175,7 +187,7 @@ function displayFilteredRecipes() {
   currentlyDisplayedRecipes = filteredData;
   displayRecipes(filteredData);
 }
-
+// cette fonction remplira les filtres du tableau
 function populateFiltersAndMap(ingrédients, ustensiles, appareils, recipe) {
   if (Array.isArray(ingrédients)) {
     ingrédients.forEach((ingrédient) => {
@@ -232,7 +244,7 @@ function populateFiltersAndMap(ingrédients, ustensiles, appareils, recipe) {
       : (mappedList.appareils[appareils] = [recipe]);
   }
 }
-
+// cette fonction créera un filtre et l'ajoutera au DOM et attachera un événement au clic.
 function handleFilterBtn(category) {
   const dropdownFilter = document.querySelector(".dropdown-" + category);
   dropdownFilter.replaceChildren();
